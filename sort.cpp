@@ -99,11 +99,20 @@ int linearSearch(auto data, auto key)
 
 //bubble sort
 void bubbleSort(auto &Data){
+	int passes=0;
+	int getMod=0;
 	for(int i=0;i<Data.size();i++){
+		passes++;
 			for(int j=0; j<Data.size()-1;j++){
 				if(Data[j]>Data[j+1]){
 					swap(Data[j],Data[j+1]);
 				}
 			}
 	}
+	if (passes>0){
+	getMod=passes%20000;
+	if(getMod==0){
+		
+	cout<<"The number of passes is: " <<passes<<endl;
+}}
 }
